@@ -1,0 +1,89 @@
+:root {  
+  --color-brand: #9eefe5;
+  --color-text: #3c474b;
+  --color-text-light: #c0e0de;
+
+  --font-family: 'Poppins', sans-serif;
+  --font-size: 1.2rem;
+
+  --component-width: 23rem;
+  --component-height: 3rem;
+  --component-border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;      
+  box-sizing: border-box;      
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+}
+
+div.click-to-copy {
+  border: 2px solid var(--color-brand);
+  background-color: transparent;
+  width: var(--component-width);
+  max-width: var(--component-width);
+  height: var(--component-height);
+  max-height: var(--component-height);
+  border-radius: var(--component-border-radius);
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p.text-content {
+  color: var(--color-text);
+  font-size: var(--font-size);
+}
+
+button#copy-to-clipboard {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 40px;
+  height: 100%;
+  transition: background 250ms ease-in-out, 
+  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button#copy-to-clipboard:active {
+  transform: scale(0.6);
+}
+
+i.ph-copy-simple {
+  font-size: 30px;
+  color: var(--color-text);
+}
+
+input {
+  margin-top: 20px;
+  width: var(--component-width);
+  max-width: var(--component-width);
+  border-radius: var(--component-border-radius);
+  height: var(--component-height);
+  max-height: var(--component-height);
+  padding: 0 0.5rem;
+  font-size: var(--font-size);
+  border: 2px solid var(--color-brand);
+  color: var(--color-text);
+}
+
+input::placeholder {
+  font-size: var(--font-size);
+  color: var(--color-text-light);
+  font-family: var(--font-family);
+}
